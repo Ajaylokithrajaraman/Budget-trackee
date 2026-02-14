@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN SECTION -->
+<div id="loginSection">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- APP SECTION -->
+<div id="appSection" class="hidden">
+
+    <h2>Advanced Budget Tracker</h2>
+
+    <button onclick="toggleDarkMode()">Dark Mode</button>
+    <button onclick="logout()">Logout</button>
+    <button onclick="exportToExcel()">Export</button>
+
+    <br><br>
+
+    <input type="number" id="budgetLimit" placeholder="Set Monthly Budget">
+    <button onclick="setBudget()">Set Budget</button>
+
+    <br><br>
+
+    <input type="number" id="amount" placeholder="Amount">
+    <select id="category">
+        <option value="">Category</option>
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Rent</option>
+        <option>Shopping</option>
+        <option>Others</option>
+    </select>
+    <input type="text" id="description" placeholder="Description">
+    <input type="date" id="date">
+    <button onclick="addExpense()">Add</button>
+
+    <br><br>
+
+    <input type="text" id="searchCategory" placeholder="Search Category" onkeyup="renderExpenses()">
+    <input type="date" id="filterDate" onchange="renderExpenses()">
+
+    <h3>Total: ₹ <span id="total">0</span></h3>
+    <h3>Budget: ₹ <span id="budgetDisplay">0</span></h3>
+    <h3 id="alertMessage"></h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Added At</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="expenseBody"></tbody>
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

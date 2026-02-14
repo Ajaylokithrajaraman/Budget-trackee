@@ -1,0 +1,43 @@
+body {
+    font-family: Arial;
+    margin: 20px;
+    transition: 0.3s;
+}
+
+.dark {
+    background-color: #121212;
+    color: white;
+}
+
+input, select, button {
+    padding: 8px;
+    margin: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid gray;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.danger {
+    color: red;
+    font-weight: bold;
+}
